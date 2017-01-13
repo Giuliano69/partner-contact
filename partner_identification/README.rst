@@ -37,6 +37,10 @@ Code:
 Python validation code:
   Optional python code called to validate ID numbers of this ID type.
 
+A Passport category is already installed, with international Code abbreviation "PSPT"
+When an invoice is issued to a private person, and sucha person has a PSPT document, 
+the invoice will present such data below the address
+
 
 Usage
 =====
