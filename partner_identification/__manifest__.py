@@ -13,6 +13,7 @@
     'category': 'Customer Relationship Management',
     'version': '10.0.1.0.0',
     'depends': [
+        'account',
         'sales_team',
     ],
     'data': [
