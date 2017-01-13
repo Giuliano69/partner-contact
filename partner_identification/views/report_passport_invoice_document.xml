@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<!-- Inherit invoice document report (from module sale) -->
+		<template id="report_passport_invoice_document" inherit_id="account.report_invoice_document">
+			<!-- Finds the first TIN number -->
+			<xpath expr="//div[@name='invoice_address']" position="inside">
+				<!-- add the Passport field in invoice address -->
+				<div t-if="o.partner_id.id_numbers">
+					<div class="row">
+						<table class="table table-condensed">
+							<thead>
+								<tr class="border-black">
+									<!-- fields that will be printed for each PAPT -->
+									<th>ID Type</th>
+									<th>ID Number</th>
+									<th>Issued on</th>
+									<th>Valid until</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr t-foreach="o.partner_id.id_numbers" t-as="doc_id">
+									<t t-if="doc_id.category_id.code=='PSPT'">
+										<td class="text-left">
+											<span t-field="doc_id.category_id.name" />
+										</td>
+										<td class="text-left">
+											<span t-field="doc_id.name" />
+										</td>
+										<td class="text-left">
+											<span t-field="doc_id.date_issued" />
+										</td>
+										<td class="text-left">
+											<span t-field="doc_id.valid_until" />
+										</td>
+									</t>
+								</tr>
+								<span t-field="o.partner_id.vat" />
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</xpath>
+		</template>
+	</data>
+</openerp>

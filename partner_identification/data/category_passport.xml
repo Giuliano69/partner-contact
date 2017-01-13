@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<odoo noupdate="0">
+    <record model="res.partner.id_category" id="id_passport">
+        <field name="name">Passport</field>
+        <field name="code">PSPT</field>
+    </record>
+</odoo>

@@ -19,12 +19,15 @@
         'views/res_partner_id_category_view.xml',
         'views/res_partner_id_number_view.xml',
         'views/res_partner_view.xml',
+        'views/report_passport_invoice_document.xml',
         'security/ir.model.access.csv',
+        'data/category_passport.xml',
     ],
     'author': 'ChriCar Beteiligungs- und Beratungs- GmbH, '
               'Tecnativa,'
               'Camptocamp,'
               'ACSONE SA/NV,'
+              'Giuliano Lotta,'
               'Odoo Community Association (OCA)',
     'website': 'https://odoo-community.org/',
     'license': 'AGPL-3',
